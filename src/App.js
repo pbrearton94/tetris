@@ -1,6 +1,7 @@
 import './App.css';
 import GridBoard from './components/grid-board/grid-board.component';
 import NextBlock from './components/next-block/next-block.component';
+import ScoreBoard from './components/score-board/score-board.component';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       </header>
       <GridBoard />
       <NextBlock />
+      <ScoreBoard />
     </div>
   );
 }
