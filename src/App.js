@@ -1,6 +1,6 @@
 import './App.css';
 import GridBoard from './components/grid-board/grid-board.component';
-import GridSquare from './components/grid-square/grid-square.component';
+import NextBlock from './components/next-block/next-block.component';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <h1>Tetris</h1>
       </header>
       <GridBoard />
+      <NextBlock />
     </div>
   );
 }
