@@ -1,5 +1,5 @@
 import React from "react";
-import "../grid-square/grid-square.style.scss";
+import "./grid-square.style.scss";
 
 const GridSquare = (props) => {
   const classes = `grid-square color-${props.color}`;

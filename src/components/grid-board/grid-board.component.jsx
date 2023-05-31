@@ -1,6 +1,6 @@
 import React from "react";
 import GridSquare from "../grid-square/grid-square.component";
-import '../grid-board/grid-board.style.scss';
+import './grid-board.style.scss';
 
 /* Create a 10 x 18 grid */
 const GridBoard = (props) => {
