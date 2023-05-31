@@ -1,6 +1,6 @@
 import React from "react";
 import GridSquare from "../grid-square/grid-square.component";
-import "../next-block/next-block.component.scss";
+import "../next-block/next-block.style.scss";
 
 /* Represents the next block that will be dropped on to the grid */
 const NextBlock = (props) => {
@@ -17,7 +17,7 @@ const NextBlock = (props) => {
       return <GridSquare key={`${row}${col}`} color={square} />;
     });
   });
-  
+
   return (
     <>
       <div className="next-block">{grid}</div>
