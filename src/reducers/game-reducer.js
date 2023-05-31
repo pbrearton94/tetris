@@ -8,8 +8,9 @@ import {
   RESUME,
   ROTATE,
 } from "../actions";
+import { defaultState } from "../utils";
 
-const gameReducer = (state = {}, action) => {
+const gameReducer = (state = defaultState(), action) => {
   switch (action.type) {
     case ROTATE:
       return state;
