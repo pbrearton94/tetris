@@ -1,22 +1,40 @@
-import React from 'react';
-import './controls.style.scss';
+import React from "react";
+import "./controls.style.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { moveDown, moveLeft, moveRight, rotate } from "../../actions";
 
+/* The controls to play tetris */
 const Controls = () => {
-    return (
-        <>
-        <div className='controls'>
-            <button className="control-button" onclick={(e) => {}}>LEFT
-            </button>
-            <button className="control-button" onclick={(e) => {}}>RIGHT
-            </button>
-            <button className="control-button" onclick={(e) => {}}>ROTATE
-            </button>
-            <button className="control-button" onclick={(e) => {}}>DOWN
-            </button>
-            
-            </div>
-        </>
-    );
+  const dispatch = useDispatch();
+  const isRunning = useSelector((state) => state.isRunning);
+
+  return (
+    <>
+      <div className="controls">
+        <button
+          className="control-button"
+          onclick={(e) => dispatch(moveLeft())}
+        >
+          LEFT
+        </button>
+        <button
+          className="control-button"
+          onclick={(e) => dispatch(moveRight())}
+        >
+          RIGHT
+        </button>
+        <button className="control-button" onclick={(e) => dispatch(rotate())}>
+          ROTATE
+        </button>
+        <button
+          className="control-button"
+          onclick={(e) => dispatch(moveDown())}
+        >
+          DOWN
+        </button>
+      </div>
+    </>
+  );
 };
 
 export default Controls;
