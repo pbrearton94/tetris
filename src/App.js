@@ -1,4 +1,5 @@
 import './App.css';
+import GridBoard from './components/grid-board/grid-board.component';
 import GridSquare from './components/grid-square/grid-square.component';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>Tetris</h1>
       </header>
-      <GridSquare color="1" />
+      <GridBoard />
     </div>
   );
 }
