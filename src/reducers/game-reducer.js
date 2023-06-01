@@ -13,8 +13,7 @@ import {
   canMoveTo,
   checkRows,
   defaultState,
-  nextRotation,
-  randomShape,
+  nextRotation
 } from "../utils";
 
 const gameReducer = (state = defaultState(), action) => {
