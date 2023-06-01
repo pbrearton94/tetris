@@ -6,31 +6,66 @@ import { moveDown, moveLeft, moveRight, rotate } from "../../actions";
 /* The controls to play tetris */
 const Controls = () => {
   const dispatch = useDispatch();
-  const isRunning = useSelector((state) => state.isRunning);
+  const isRunning = useSelector((state) => state.game.isRunning);
+  const gameOver = useSelector((state) => state.game.gameOver);
 
   return (
     <>
-      <div className="controls">
+      <div className={`controls`}>
+        {/* left */}
         <button
+          disabled={!isRunning || gameOver}
           className="control-button"
-          onClick={(e) => dispatch(moveLeft())}
+          onClick={(e) => {
+            if (!isRunning || gameOver) {
+              return;
+            }
+            dispatch(moveLeft());
+          }}
         >
-          LEFT
+          Left
         </button>
+
+        {/* right */}
         <button
+          disabled={!isRunning || gameOver}
           className="control-button"
-          onClick={(e) => dispatch(moveRight())}
+          onClick={(e) => {
+            if (!isRunning || gameOver) {
+              return;
+            }
+            dispatch(moveRight());
+          }}
         >
-          RIGHT
+          Right
         </button>
-        <button className="control-button" onClick={(e) => dispatch(rotate())}>
-          ROTATE
-        </button>
+
+        {/* rotate */}
         <button
+          disabled={!isRunning || gameOver}
           className="control-button"
-          onClick={(e) => dispatch(moveDown())}
+          onClick={(e) => {
+            if (!isRunning || gameOver) {
+              return;
+            }
+            dispatch(rotate());
+          }}
         >
-          DOWN
+          Rotate
+        </button>
+
+        {/* down */}
+        <button
+          disabled={!isRunning || gameOver}
+          className="control-button"
+          onClick={(e) => {
+            if (!isRunning || gameOver) {
+              return;
+            }
+            dispatch(moveDown());
+          }}
+        >
+          Down
         </button>
       </div>
     </>
