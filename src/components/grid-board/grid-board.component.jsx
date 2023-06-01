@@ -16,7 +16,6 @@ const GridBoard = (props) => {
   const { grid, shape, rotation, x, y, isRunning, speed } = game;
   const block = shapes[shape][rotation];
   const blockColor = shape;
-  
   useEffect(() => {
     requestRef.current = requestAnimationFrame(update);
     return () => cancelAnimationFrame(requestRef.current);
