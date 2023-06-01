@@ -13,22 +13,22 @@ const Controls = () => {
       <div className="controls">
         <button
           className="control-button"
-          onclick={(e) => dispatch(moveLeft())}
+          onClick={(e) => dispatch(moveLeft())}
         >
           LEFT
         </button>
         <button
           className="control-button"
-          onclick={(e) => dispatch(moveRight())}
+          onClick={(e) => dispatch(moveRight())}
         >
           RIGHT
         </button>
-        <button className="control-button" onclick={(e) => dispatch(rotate())}>
+        <button className="control-button" onClick={(e) => dispatch(rotate())}>
           ROTATE
         </button>
         <button
           className="control-button"
-          onclick={(e) => dispatch(moveDown())}
+          onClick={(e) => dispatch(moveDown())}
         >
           DOWN
         </button>
