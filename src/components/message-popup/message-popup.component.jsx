@@ -11,7 +11,7 @@ const MessagePopup = (props) => {
   let isHidden = "hidden";
 
   if (gameOver) {
-    message = "Game Over";
+    message = "Get Reckt Nerd";
     isHidden = "";
   } else if (!isRunning) {
     message = "Paused";
