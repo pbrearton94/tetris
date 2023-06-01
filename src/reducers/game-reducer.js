@@ -65,9 +65,9 @@ const gameReducer = (state = defaultState(), action) => {
       newState.score = score + checkRows(newGrid);
       return newState;
     case RESUME:
-      return state;
+      return { ...state, isRunning: true};
     case PAUSE:
-      return state;
+      return { ...state, isRunning: false};
     case GAME_OVER:
       return state;
     case RESTART:
