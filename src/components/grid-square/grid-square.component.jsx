@@ -3,6 +3,7 @@ import "./grid-square.style.scss";
 
 const GridSquare = (props) => {
   const classes = `grid-square color-${props.color}`;
+  
   return (
     <>
       <div className={classes} />

@@ -13,7 +13,7 @@ const GridBoard = (props) => {
   const progressTimeRef = useRef(0);
   const dispatch = useDispatch();
   const game = useSelector((state) => state.game);
-  const { grid, shape, rotation, x, y, isRunning, speed } = game;
+  const { grid, shape, rotation, x, y, isRunning, speed, level } = game;
   const block = shapes[shape][rotation];
   const blockColor = shape;
   useEffect(() => {

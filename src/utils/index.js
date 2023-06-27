@@ -182,6 +182,7 @@ export const defaultState = () => {
     score: 0,
     speed: 1000,
     gameOver: false,
+    level: 0
   };
 };
 

@@ -10,7 +10,7 @@ import ScoreBoard from "./components/score-board/score-board.component";
 
 const store = createStore(reducers);
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
